@@ -11,8 +11,9 @@ public class AttachToMouse : MonoBehaviour
     }
     void Update()
     {
-        Vector3 pos = Input.mousePosition;
-        pos.z = 0;
+        Vector3 pos;
+        pos = Input.mousePosition;
+        pos.z = 10;
         transform.position = Camera.main.ScreenToWorldPoint(pos);
         
     }
