@@ -47,8 +47,6 @@ ExportedObj/
 *.opendb
 *.VC.db
 
-SceneTemplateSettings.json
-
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
@@ -65,7 +63,6 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
 
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
