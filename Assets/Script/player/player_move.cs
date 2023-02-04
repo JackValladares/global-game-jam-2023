@@ -24,9 +24,11 @@ public class player_move : MonoBehaviour
     private Vector2 movement;
     private Rigidbody rBody;
     public float mSpeed = 1f;
+    private Animator animator;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         debugPlayerState.enabled = debugMode;
         rBody = gameObject.GetComponent<Rigidbody>();
     }
@@ -41,9 +43,11 @@ public class player_move : MonoBehaviour
         switch(state)
         {
             case(PlayerState.Moving):
+                animator.SetBool("Rooted", false);
                 MoveBehavior();
                 break;
             case(PlayerState.Rooted):
+                animator.SetBool("Rooted", true);
                 RootedBehavior();
                 break;
         }      
