@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class objectDraggable : MonoBehaviour
 {
+    public abstract Vector3 ConstraintedMovement(Vector3 newPos);
     public AttachToMouse mouseCollider;
     public enum ObjectState
     {
@@ -61,9 +62,8 @@ public abstract class objectDraggable : MonoBehaviour
         Debug.Log("State: Dragging");
         Vector3 newPos = mouseCollider.transform.position;
         newPos.z = this.transform.position.z;
-        transform.position = newPos;
+        transform.position = ConstraintedMovement(newPos);
     }
-
 
     
 }
