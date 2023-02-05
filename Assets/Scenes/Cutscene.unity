@@ -278,6 +278,95 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!82 &210814398 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1691168751, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+  m_PrefabInstance: {fileID: 1562648769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &463660199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 463660201}
+  - component: {fileID: 463660200}
+  m_Layer: 0
+  m_Name: Elder Leaf
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &463660200
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463660199}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 065672a058f9698439e1cb37f80ca734, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.601, y: 1.205}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &463660201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463660199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.32, y: 2.02, z: -0.135}
+  m_LocalScale: {x: 0.2926, y: 0.2926, z: 0.67514527}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &599482114
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,26 +624,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &1092705351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485964043981025660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fc926e3eb88dec40a17dfc39734b256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  falling: 0
-  rotationParent: {fileID: 0}
-  debugMode: 0
-  debugPlayerState: {fileID: 0}
-  state: 1
-  speed: {x: 50, y: 50, z: 0}
-  rBody: {fileID: 0}
-  mSpeed: 10
 --- !u!95 &1092705354
 Animator:
   serializedVersion: 5
@@ -786,6 +855,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415645457}
   m_CullTransparentMesh: 1
+--- !u!82 &1538096861 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1836847450, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+  m_PrefabInstance: {fileID: 1562648769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1562648769
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 799367077044762544, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: SoundEffectDictionary.m_keys.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762544, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: SoundEffectDictionary.m_values.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762544, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: SoundEffectDictionary.m_keys.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762544, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: SoundEffectDictionary.m_keys.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762544, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: SoundEffectDictionary.m_keys.Array.data[4]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762544, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: SoundEffectDictionary.m_values.Array.data[2]
+      value: 
+      objectReference: {fileID: 1538096861}
+    - target: {fileID: 799367077044762544, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: SoundEffectDictionary.m_values.Array.data[3]
+      value: 
+      objectReference: {fileID: 1606100985}
+    - target: {fileID: 799367077044762544, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: SoundEffectDictionary.m_values.Array.data[4]
+      value: 
+      objectReference: {fileID: 210814398}
+    - target: {fileID: 799367077044762545, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_Name
+      value: Audio Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.898631
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2331166
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 408.83856
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799367077044762551, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
 --- !u!1 &1603493087
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +1017,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1606100985 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 799367077283442179, guid: 745fb73f21f8ade4f89e1de345cac0a9, type: 3}
+  m_PrefabInstance: {fileID: 1562648769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1606444290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,9 +1318,7 @@ GameObject:
   - component: {fileID: 1485964043981025658}
   - component: {fileID: 1485964043981025661}
   - component: {fileID: 1485964043981025659}
-  - component: {fileID: 5700552088573436026}
   - component: {fileID: 1092705354}
-  - component: {fileID: 1092705351}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1453,22 +1619,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &5700552088573436026
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485964043981025660}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 56
-  m_CollisionDetection: 0
 --- !u!1 &6715228558720963273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,61 +1664,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueList:
-  - Name: 0
+  - Name: 1
     Text: "Pip, thank you for meeting me at this time of great fear\u2026"
-    Sprite: {fileID: 21300000, guid: 1656a3d7fb5a6d64fb39237016e4838c, type: 3}
+    Sprite: {fileID: 21300000, guid: 6ed4827d2265e9c40b0ff786d2e3b431, type: 3}
   - Name: 0
     Text: Of Course Elder Leaf, what is happening to the Great Tree!?
-    Sprite: {fileID: 21300000, guid: e86cd54b4d109b1489f0b869f23ad2bb, type: 3}
-  - Name: 0
+    Sprite: {fileID: 21300000, guid: d132d742d0f08c74a94bdf3b412f0b2f, type: 3}
+  - Name: 1
     Text: Pip, there are things that you have not yet learned about the world, things
       that you have been trained for.
-    Sprite: {fileID: 21300000, guid: 1656a3d7fb5a6d64fb39237016e4838c, type: 3}
+    Sprite: {fileID: 21300000, guid: 6ed4827d2265e9c40b0ff786d2e3b431, type: 3}
   - Name: 0
     Text: ALIENS!?
-    Sprite: {fileID: 21300000, guid: e86cd54b4d109b1489f0b869f23ad2bb, type: 3}
-  - Name: 0
+    Sprite: {fileID: 21300000, guid: d132d742d0f08c74a94bdf3b412f0b2f, type: 3}
+  - Name: 1
     Text: "\u2026No?"
-    Sprite: {fileID: 0}
-  - Name: 0
+    Sprite: {fileID: 21300000, guid: 6ed4827d2265e9c40b0ff786d2e3b431, type: 3}
+  - Name: 1
     Text: "Oh\u2026 well what is it?"
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: d132d742d0f08c74a94bdf3b412f0b2f, type: 3}
   - Name: 0
     Text: "Well if you can contain yourself, there is a rot that has infected our
       Great Tree, a rot that comes once every century. This rot spawns from the evil
       of the world.\r"
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 6ed4827d2265e9c40b0ff786d2e3b431, type: 3}
   - Name: 0
     Text: "I thought we got rid of that?\r"
-    Sprite: {fileID: 0}
-  - Name: 0
+    Sprite: {fileID: 21300000, guid: d132d742d0f08c74a94bdf3b412f0b2f, type: 3}
+  - Name: 1
     Text: "No, that was just Brian\u2026\r\n"
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 6ed4827d2265e9c40b0ff786d2e3b431, type: 3}
   - Name: 0
     Text: "Ah ok, well what does this have to do with me?\r"
-    Sprite: {fileID: 0}
-  - Name: 0
+    Sprite: {fileID: 21300000, guid: d132d742d0f08c74a94bdf3b412f0b2f, type: 3}
+  - Name: 1
     Text: 'The rot has intertwined with the roots of our great tree, you must go
       down into the Crystal Cavern below the Great Tree and relieve the roots of
       the rot.
 
 '
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 6ed4827d2265e9c40b0ff786d2e3b431, type: 3}
   - Name: 0
     Text: "I don\u2019t know how to do that\u2026\r"
-    Sprite: {fileID: 0}
-  - Name: 0
+    Sprite: {fileID: 21300000, guid: d132d742d0f08c74a94bdf3b412f0b2f, type: 3}
+  - Name: 1
     Text: "As your King I command you!?\r"
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 6ed4827d2265e9c40b0ff786d2e3b431, type: 3}
   - Name: 0
     Text: "You\u2019re the Mayor\u2026"
-    Sprite: {fileID: 0}
-  - Name: 0
+    Sprite: {fileID: 21300000, guid: d132d742d0f08c74a94bdf3b412f0b2f, type: 3}
+  - Name: 1
     Text: "Same thing!? Now Go!?\r"
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 6ed4827d2265e9c40b0ff786d2e3b431, type: 3}
   - Name: 1
     Text: Be safe me my little one.
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 6ed4827d2265e9c40b0ff786d2e3b431, type: 3}
   Timeline: {fileID: 35226077}
   DialogueUI: {fileID: 599482114}
   TextUI: {fileID: 1415645459}
@@ -1576,3 +1726,4 @@ MonoBehaviour:
   currentSpeed: 0.15
   secondsBetweenCharacters: 0.05
   dialogueInput: 13
+  audioManager: {fileID: 0}

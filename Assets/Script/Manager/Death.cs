@@ -13,9 +13,9 @@ public class Death : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-        Destroy(other.gameObject);
-        GameOverUI.SetActive(true);
-        GameObject.Find("Audio Manager").GetComponent<AudioManager>().ChangeBackground(E_BackGroundMusic.Game_Over);
+            Destroy(other.gameObject);
+            GameOverUI.SetActive(true);
+            GameObject.Find("Audio Manager").GetComponent<AudioManager>().ChangeBackground(E_BackGroundMusic.Game_Over);
         }
 
     }
