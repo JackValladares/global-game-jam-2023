@@ -87,9 +87,16 @@ public class player_move : MonoBehaviour
     bool CheckGrounded()
     {
         
-        Debug.DrawRay(new Vector3(transform.position.x-.1f, transform.position.y-.55f, transform.position.z), Vector3.down*.3f, Color.green);
-        Debug.Log(Physics.Raycast(new Vector3(transform.position.x-.1f, transform.position.y-.55f, transform.position.z), Vector3.down, .3f));
-        return Physics.Raycast(new Vector3(transform.position.x-.1f, transform.position.y-.55f, transform.position.z), Vector3.down, .3f);
+        Debug.DrawRay(transform.position, Vector3.down*1f, Color.green);
+
+        bool grounded = false;
+        foreach(RaycastHit hit in Physics.RaycastAll(transform.position, Vector3.down*1.5f))
+        {
+            if(hit.transform.tag != "Player" && hit.transform.tag != "MouseDrag" && (hit.distance < 1.5f)) grounded = true;
+        }
+        return grounded;
+
+        
     }
 
     void RootedBehavior()
@@ -123,7 +130,7 @@ public class player_move : MonoBehaviour
  
     void PlayerDebug()
     {
-        debugPlayerState.text = string.Format("Player State: {0}\nCan Root: {1}\nGrounded: {2}", state, canRoot, !falling);
+        debugPlayerState.text = string.Format("Player State: {0}\nCan Root: {1}\nFalling: {2}", state, canRoot, falling);
     }
 
 }
