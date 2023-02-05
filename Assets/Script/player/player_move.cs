@@ -6,10 +6,11 @@ using TMPro;
 public class player_move : MonoBehaviour
 
 {
+    public Transform rotationParent;
     //Debugging
     public bool debugMode = true;
     public TextMeshProUGUI debugPlayerState;
-    private enum PlayerState
+    public enum PlayerState
     {
         Moving, 
         Rooted,
@@ -19,10 +20,10 @@ public class player_move : MonoBehaviour
     }
     
     private bool canRoot = false;
-    private PlayerState state = PlayerState.Moving;
+    public PlayerState state = PlayerState.Moving;
     public Vector3 speed = new Vector3(50, 50, 0);
     private Vector2 movement;
-    private Rigidbody rBody;
+    public Rigidbody rBody;
     public float mSpeed = 1f;
     private Animator animator;
 
@@ -33,8 +34,20 @@ public class player_move : MonoBehaviour
         rBody = gameObject.GetComponent<Rigidbody>();
     }
 
+
     void Update()
     {
+
+        if(rotationParent != null)
+        {
+            rBody.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationX;
+            Vector3 parentRotation = rotationParent.eulerAngles;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, parentRotation.z));
+        }else{
+            transform.rotation = Quaternion.identity;
+            rBody.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationX;
+        }
+
         if(debugMode)
         {
             PlayerDebug();
@@ -53,26 +66,33 @@ public class player_move : MonoBehaviour
         }      
     }
 
+
     //State Behaviors
     void MoveBehavior()
     {
-        
+        if(animator.GetBool("canUnroot")) animator.SetBool("canUnroot", false);
         transform.Translate(Vector2.right * 0.0005f * mSpeed);
-        if (Input.GetKeyDown(KeyCode.Space) && canRoot)
+        if (Input.GetKeyDown(KeyCode.Space) && canRoot && state != PlayerState.Rooted)
         {
-
+            rBody.AddForce(new Vector3(2f, 2f, 0), ForceMode.Impulse);
             state = PlayerState.Rooted;
         }
     }
 
     void RootedBehavior()
     {
-        if(Input.GetKeyUp(KeyCode.Space))
+        
+        if(!Input.GetKey(KeyCode.Space) && animator.GetBool("canUnroot"))
         {
             state = PlayerState.Moving;
+            toggleUnroot();
         }
     }
 
+    public void toggleUnroot()
+    {
+        animator.SetBool("canUnroot", !animator.GetBool("canUnroot"));
+    }
 
     //Collision checking
     void OnCollisionEnter(Collision collision) {

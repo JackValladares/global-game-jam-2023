@@ -120,12 +120,12 @@ TextureImporter:
       name: root animation_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 248
         y: 3122
-        width: 1453
+        width: 454
         height: 1561
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: root animation_1
       rect:
         serializedVersion: 2
-        x: 1453
-        y: 3122
-        width: 1453
-        height: 1561
+        x: 1781
+        y: 3118
+        width: 394
+        height: 1087
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -162,12 +162,12 @@ TextureImporter:
       name: root animation_2
       rect:
         serializedVersion: 2
-        x: 2906
-        y: 3122
-        width: 1453
-        height: 1561
+        x: 3282
+        y: 3226
+        width: 684
+        height: 1126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: root animation_3
       rect:
         serializedVersion: 2
-        x: 4359
-        y: 3122
-        width: 1453
-        height: 1561
+        x: 4755
+        y: 3759
+        width: 698
+        height: 840
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,12 +204,12 @@ TextureImporter:
       name: root animation_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1561
-        width: 1453
-        height: 1561
+        x: 448
+        y: 2046
+        width: 620
+        height: 1076
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: root animation_5
       rect:
         serializedVersion: 2
-        x: 1453
+        x: 1886
         y: 1561
-        width: 1453
+        width: 950
         height: 1561
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,12 +246,12 @@ TextureImporter:
       name: root animation_6
       rect:
         serializedVersion: 2
-        x: 2906
-        y: 1561
-        width: 1453
-        height: 1561
+        x: 3367
+        y: 1557
+        width: 661
+        height: 1354
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -267,12 +267,12 @@ TextureImporter:
       name: root animation_7
       rect:
         serializedVersion: 2
-        x: 4359
+        x: 4724
         y: 1561
-        width: 1453
-        height: 1561
+        width: 678
+        height: 1401
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,12 +288,12 @@ TextureImporter:
       name: root animation_8
       rect:
         serializedVersion: 2
-        x: 0
+        x: 356
         y: 0
-        width: 1453
-        height: 1561
+        width: 667
+        height: 1395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,12 +309,12 @@ TextureImporter:
       name: root animation_9
       rect:
         serializedVersion: 2
-        x: 1453
+        x: 1792
         y: 0
-        width: 1453
+        width: 664
         height: 1561
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,12 +330,12 @@ TextureImporter:
       name: root animation_10
       rect:
         serializedVersion: 2
-        x: 2906
-        y: 0
-        width: 1453
-        height: 1561
+        x: 3367
+        y: 1557
+        width: 661
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -356,7 +356,7 @@ TextureImporter:
         width: 1453
         height: 1561
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

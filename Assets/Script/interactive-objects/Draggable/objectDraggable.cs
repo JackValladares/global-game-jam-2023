@@ -62,7 +62,7 @@ public abstract class objectDraggable : MonoBehaviour
                 break;
         }
 
-        mouseCollider = AttachToMouse.instance;
+        //mouseCollider = AttachToMouse.instance;
         foreach(Transform child in gameObject.transform)
         {
             if(child.tag == "GrabPoint")
