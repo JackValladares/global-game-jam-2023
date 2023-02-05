@@ -12,6 +12,7 @@ public abstract class objectDraggable : MonoBehaviour
     public enum StartingHeight{
         top, bottom, center
     }
+    private Light light;
     public StartingSide side = StartingSide.center;
     public StartingHeight height = StartingHeight.center;
     public float rangeY = 10f;
@@ -24,6 +25,7 @@ public abstract class objectDraggable : MonoBehaviour
         Dragging
     }
     Camera cam;
+    private bool isThis;
     Transform grabPoint;
     ObjectState state;
     Vector3 mousePos;
@@ -31,7 +33,7 @@ public abstract class objectDraggable : MonoBehaviour
     Vector3 grabPointPos;
     void Start()
     {
-
+        if(mouseCollider == null) mouseCollider = AttachToMouse.instance;
         startingPos = this.transform.position;
 
         switch(height)
@@ -68,6 +70,8 @@ public abstract class objectDraggable : MonoBehaviour
             if(child.tag == "GrabPoint")
             {
                 grabPoint = child;
+                light = grabPoint.GetComponent<Light>();
+                light.enabled = false;
             }
         }
     }
@@ -83,7 +87,7 @@ public abstract class objectDraggable : MonoBehaviour
     }
 
     private void OnTriggerStay(Collider other) {
-        
+        light.enabled = true;
         if(other.tag == "MouseDrag")
         {
             if(Input.GetMouseButton(0))
@@ -96,6 +100,7 @@ public abstract class objectDraggable : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other) {
+        light.enabled = false;
         if(other == mouseCollider)
         {
             state = ObjectState.Idle;

@@ -78,10 +78,11 @@ public class player_move : MonoBehaviour
         transform.Translate(Vector2.right * 0.0005f * mSpeed);
         if (Input.GetKeyDown(KeyCode.Space) && canRoot && state != PlayerState.Rooted && !falling)
         {
-            rBody.AddForce(new Vector3(2f, 2f, 0), ForceMode.Impulse);
+            rBody.AddForce(new Vector3(3f, 3f, 0), ForceMode.Impulse);
             state = PlayerState.Rooted;
         }
         falling = !CheckGrounded();
+        canRoot = !falling;
     }
 
     bool CheckGrounded()
@@ -114,20 +115,6 @@ public class player_move : MonoBehaviour
         animator.SetBool("canUnroot", !animator.GetBool("canUnroot"));
     }
 
-    //Collision checking
-    void OnCollisionEnter(Collision collision) {
-        
-        if(collision.gameObject.tag == "Rootable")
-        {
-            canRoot = true;
-        }
-
-    }
-    void OnCollisionExit(Collision collision)
-    {
-        canRoot = false;
-    }
- 
     void PlayerDebug()
     {
         debugPlayerState.text = string.Format("Player State: {0}\nCan Root: {1}\nFalling: {2}", state, canRoot, falling);
