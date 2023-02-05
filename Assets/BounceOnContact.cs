@@ -7,7 +7,7 @@ public class BounceOnContact : MonoBehaviour
     Animator animator;
     player_move player;
     int maxCooldownTimer = 500;
-    public int launchTimer = 150;
+    public int launchTimer = 80;
     int cooldownTimer = 0;
     bool canBounce = true;
     public float horizontalStrength = 2f;
@@ -43,7 +43,7 @@ public class BounceOnContact : MonoBehaviour
                 canBounce = false;
                 animator.SetTrigger("BounceTrigger");
                 cooldownTimer = maxCooldownTimer;
-                launchTimer = 50;
+                launchTimer = 20;
             }
             
         }

@@ -6027,11 +6027,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1763848988116225900, guid: db95e0271de84664d919cba364d97770, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 111.07
+      value: 111.67
       objectReference: {fileID: 0}
     - target: {fileID: 1763848988116225900, guid: db95e0271de84664d919cba364d97770, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.399999
+      value: -6.9
       objectReference: {fileID: 0}
     - target: {fileID: 1763848988116225900, guid: db95e0271de84664d919cba364d97770, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7411,7 +7411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6175650103137159031, guid: 7e21d6b9c7e8bb943b9683d5f3268bab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.78
+      value: 31.7
       objectReference: {fileID: 0}
     - target: {fileID: 6175650103137159031, guid: 7e21d6b9c7e8bb943b9683d5f3268bab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7530,7 +7530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1763848988116225900, guid: db95e0271de84664d919cba364d97770, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.29
+      value: 31.36
       objectReference: {fileID: 0}
     - target: {fileID: 1763848988116225900, guid: db95e0271de84664d919cba364d97770, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8065,11 +8065,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1763848988116225900, guid: db95e0271de84664d919cba364d97770, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 111.33
+      value: 111.73
       objectReference: {fileID: 0}
     - target: {fileID: 1763848988116225900, guid: db95e0271de84664d919cba364d97770, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.55
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1763848988116225900, guid: db95e0271de84664d919cba364d97770, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8757,6 +8757,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6062167092966298518, guid: ec4133564141ecb49955f17eef6cbf49, type: 3}
+      propertyPath: launchTimer
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6062167093177520665, guid: ec4133564141ecb49955f17eef6cbf49, type: 3}
       propertyPath: m_Name
       value: BounceMushroom
@@ -8880,8 +8884,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7965980904638303996, guid: d568a66b9a9c5c14ca5e06b49f068a08, type: 3}
+      propertyPath: mSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965980904638303996, guid: d568a66b9a9c5c14ca5e06b49f068a08, type: 3}
       propertyPath: debugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7965980904638303996, guid: d568a66b9a9c5c14ca5e06b49f068a08, type: 3}
       propertyPath: debugPlayerState

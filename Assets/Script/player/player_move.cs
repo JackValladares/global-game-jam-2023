@@ -29,6 +29,12 @@ public class player_move : MonoBehaviour
     public float mSpeed = 1f;
     private Animator animator;
 
+    void Awake()
+    {
+         QualitySettings.vSyncCount = 0;
+         Application.targetFrameRate = 60;
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -67,15 +73,15 @@ public class player_move : MonoBehaviour
                 animator.SetBool("Rooted", true);
                 RootedBehavior();
                 break;
-        }      
+        }  
+           
     }
-
 
     //State Behaviors
     void MoveBehavior()
     {
         if(animator.GetBool("canUnroot")) animator.SetBool("canUnroot", false);
-        transform.Translate(Vector2.right * 0.0005f * mSpeed);
+        transform.Translate(Vector2.right * 0.002f * mSpeed);
         if (Input.GetKeyDown(KeyCode.Space) && canRoot && state != PlayerState.Rooted && !falling)
         {
             rBody.AddForce(new Vector3(3f, 3f, 0), ForceMode.Impulse);
@@ -117,7 +123,7 @@ public class player_move : MonoBehaviour
 
     void PlayerDebug()
     {
-        debugPlayerState.text = string.Format("Player State: {0}\nCan Root: {1}\nFalling: {2}", state, canRoot, falling);
+        debugPlayerState.text = string.Format("Player State: {0}\nCan Root: {1}\nFalling: {2}", state, animator.GetBool("canUnroot"), falling);
     }
 
 }
