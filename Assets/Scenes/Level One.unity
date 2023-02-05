@@ -16052,6 +16052,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5700552087182216234, guid: acf228302dda31e4c998e72adaede635, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700552087182216234, guid: acf228302dda31e4c998e72adaede635, type: 3}
       propertyPath: m_Constraints
       value: 120
       objectReference: {fileID: 0}
