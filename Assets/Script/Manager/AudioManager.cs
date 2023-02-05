@@ -10,8 +10,18 @@ public class ESoundEffectAudioSourceDictionary : SerializableDictionary<E_SoundE
 [Serializable]
 public class EBackgroundMusicAudioSourceDictionary : SerializableDictionary<E_BackGroundMusic, UnityEngine.AudioSource> { }
 
-public enum E_BackGroundMusic { Placeholder }
-public enum E_SoundEffect { Placeholder }
+public enum E_BackGroundMusic { 
+    Titlescreen,
+    Victory,
+    Game_Over,
+    Level_1,
+    Level_2,
+    Level_3,
+    Level_Extra
+}
+public enum E_SoundEffect { 
+    Placeholder 
+}
 
 public class AudioManager : MonoBehaviour
 {
@@ -55,10 +65,10 @@ public class AudioManager : MonoBehaviour
         switch (scene.name)
         {
             case "Main Menu":
-                Instance.ChangeBackground(E_BackGroundMusic.Placeholder);
+                Instance.ChangeBackground(E_BackGroundMusic.Titlescreen);
                 break;
-            case "Main Game":
-                Instance.ChangeBackground(E_BackGroundMusic.Placeholder);
+            case "Level One":
+                Instance.ChangeBackground(E_BackGroundMusic.Level_1);
                 break;
         }
     }
@@ -68,9 +78,12 @@ public class AudioManager : MonoBehaviour
 
         if (BackgroundMusic.isPlaying)
             BackgroundMusic.Stop();
+
         BackgroundMusic = BackgroundMusicDictionary[background];
 
         BackgroundMusic.Play();
+
+        
     }
 
     public void PlaySoundEffect(E_SoundEffect soundEffect)
