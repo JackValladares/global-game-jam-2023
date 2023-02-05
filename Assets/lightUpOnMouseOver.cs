@@ -20,4 +20,11 @@ public class lightUpOnMouseOver : MonoBehaviour
             myLight.enabled = true;
         }
     }
+        private void OnTriggerExit(Collider other) {
+        
+        if(other.tag == "MouseDrag")
+        {
+            myLight.enabled = false;
+        }
+    }
 }
