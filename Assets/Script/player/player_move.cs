@@ -6,6 +6,8 @@ using TMPro;
 public class player_move : MonoBehaviour
 
 {
+    public bool falling = false;
+    private CapsuleCollider cCollider;
     public Transform rotationParent;
     //Debugging
     public bool debugMode = true;
@@ -32,11 +34,12 @@ public class player_move : MonoBehaviour
         animator = GetComponent<Animator>();
         debugPlayerState.enabled = debugMode;
         rBody = gameObject.GetComponent<Rigidbody>();
+        cCollider = GetComponent<CapsuleCollider>();
     }
-
 
     void Update()
     {
+        
 
         if(rotationParent != null)
         {
@@ -58,6 +61,7 @@ public class player_move : MonoBehaviour
             case(PlayerState.Moving):
                 animator.SetBool("Rooted", false);
                 MoveBehavior();
+                animator.SetBool("falling", falling);
                 break;
             case(PlayerState.Rooted):
                 animator.SetBool("Rooted", true);
@@ -72,11 +76,20 @@ public class player_move : MonoBehaviour
     {
         if(animator.GetBool("canUnroot")) animator.SetBool("canUnroot", false);
         transform.Translate(Vector2.right * 0.0005f * mSpeed);
-        if (Input.GetKeyDown(KeyCode.Space) && canRoot && state != PlayerState.Rooted)
+        if (Input.GetKeyDown(KeyCode.Space) && canRoot && state != PlayerState.Rooted && !falling)
         {
             rBody.AddForce(new Vector3(2f, 2f, 0), ForceMode.Impulse);
             state = PlayerState.Rooted;
         }
+        falling = !CheckGrounded();
+    }
+
+    bool CheckGrounded()
+    {
+        
+        Debug.DrawRay(new Vector3(transform.position.x-.1f, transform.position.y-.55f, transform.position.z), Vector3.down*.3f, Color.green);
+        Debug.Log(Physics.Raycast(new Vector3(transform.position.x-.1f, transform.position.y-.55f, transform.position.z), Vector3.down, .3f));
+        return Physics.Raycast(new Vector3(transform.position.x-.1f, transform.position.y-.55f, transform.position.z), Vector3.down, .3f);
     }
 
     void RootedBehavior()
@@ -110,7 +123,7 @@ public class player_move : MonoBehaviour
  
     void PlayerDebug()
     {
-        debugPlayerState.text = string.Format("Player State: {0}\nCan Root: {1}\nMouse ({2}, {3})", state, canRoot, Input.mousePosition.x, Input.mousePosition.y);
+        debugPlayerState.text = string.Format("Player State: {0}\nCan Root: {1}\nGrounded: {2}", state, canRoot, !falling);
     }
 
 }
