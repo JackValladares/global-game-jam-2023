@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     public float currentSpeed = 0.15f;
     public float secondsBetweenCharacters = 0.15f;
     public KeyCode dialogueInput = KeyCode.Return;
+    public GameObject audioManager;
 
     private void Awake()
     {
@@ -59,14 +60,19 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (Dialogue dialogue in DialogueList)
         {
+            if (dialogue.Name == E_Character.Pip)
+            {
+                Debug.Log("test");
+                GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySoundEffect(E_SoundEffect.Pip);
+            }
+            if (dialogue.Name == E_Character.ElderLeaf)
+            {
+                GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySoundEffect(E_SoundEffect.Elder_leaf);
+            }
             ImageUI.sprite = dialogue.Sprite;
             bool beforeLast = DialogueList.Count - 2 == DialogueList.IndexOf(dialogue);
             yield return StartCoroutine(DisplayString(dialogue, beforeLast));
             currentSpeed = secondsBetweenCharacters;
-            Debug.Log(DialogueList.Count);
-            Debug.Log(DialogueList.IndexOf(dialogue));
-            Debug.Log(beforeLast);
-            Debug.Log(dialogue.Text);
         }
     }
 

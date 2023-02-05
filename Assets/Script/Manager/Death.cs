@@ -13,5 +13,6 @@ public class Death : MonoBehaviour
     {
         Destroy(other.gameObject);
         GameOverUI.SetActive(true);
+        GameObject.Find("Audio Manager").GetComponent<AudioManager>().ChangeBackground(E_BackGroundMusic.Game_Over);
     }
 }

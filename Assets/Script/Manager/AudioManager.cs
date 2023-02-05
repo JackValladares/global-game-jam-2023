@@ -20,7 +20,11 @@ public enum E_BackGroundMusic {
     Level_Extra
 }
 public enum E_SoundEffect { 
-    Placeholder 
+    Click,
+    Voice,
+    Walk,
+    Pip,
+    Elder_leaf
 }
 
 public class AudioManager : MonoBehaviour
@@ -70,6 +74,13 @@ public class AudioManager : MonoBehaviour
             case "Level One":
                 Instance.ChangeBackground(E_BackGroundMusic.Level_1);
                 break;
+            case "Level Two":
+                Instance.ChangeBackground(E_BackGroundMusic.Level_2);
+                break;
+            case "Level Three":
+                Instance.ChangeBackground(E_BackGroundMusic.Level_3);
+                break;
+
         }
     }
 
@@ -89,6 +100,11 @@ public class AudioManager : MonoBehaviour
     public void PlaySoundEffect(E_SoundEffect soundEffect)
     {
         SoundEffectDictionary[soundEffect].Play();
+    }
+
+    public void PlaySoundEffect2()
+    {
+        Debug.Log("Test");
     }
 
 
