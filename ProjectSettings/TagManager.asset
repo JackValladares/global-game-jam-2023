@@ -7,6 +7,7 @@ TagManager:
   - Rootable
   - GrabPoint
   - MouseDrag
+  - DialogueUI
   layers:
   - Default
   - TransparentFX
