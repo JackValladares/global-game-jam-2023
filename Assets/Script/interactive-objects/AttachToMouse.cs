@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AttachToMouse : MonoBehaviour
 {
+    public bool isAttached = false;
     public static AttachToMouse instance;
     void Start()
     {

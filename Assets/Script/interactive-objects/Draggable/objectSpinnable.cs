@@ -5,6 +5,7 @@ using UnityEngine;
 public class objectSpinnable : MonoBehaviour
 {
     public float speed = 1f;
+    private Light light;
     public AttachToMouse mouseCollider;
     public enum ObjectState
     {
@@ -20,13 +21,15 @@ public class objectSpinnable : MonoBehaviour
     void Start()
     {
 
-
+        if(mouseCollider == null) mouseCollider = AttachToMouse.instance;
         //mouseCollider = AttachToMouse.instance;
         foreach(Transform child in gameObject.transform)
         {
             if(child.tag == "GrabPoint")
             {
                 grabPoint = child;
+                light = grabPoint.GetComponent<Light>();
+                light.enabled = false;
             }
         }
     }
@@ -42,10 +45,10 @@ public class objectSpinnable : MonoBehaviour
     }
 
     private void OnTriggerStay(Collider other) {
-        
+        light.enabled = true;
         if(other.tag == "MouseDrag")
         {
-            if(Input.GetMouseButton(0))
+            if(Input.GetMouseButton(0) && !other.GetComponent<AttachToMouse>().isAttached)
             {
                 state = ObjectState.Dragging;
             }else{
@@ -55,6 +58,7 @@ public class objectSpinnable : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other) {
+        light.enabled = false;
         if(other == mouseCollider)
         {
             state = ObjectState.Idle;
