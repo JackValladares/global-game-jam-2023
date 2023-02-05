@@ -5,11 +5,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-[Serializable]
-public class ESoundEffectAudioSourceDictionary : SerializableDictionary<E_SoundEffect, UnityEngine.AudioSource> { }
-[Serializable]
-public class EBackgroundMusicAudioSourceDictionary : SerializableDictionary<E_BackGroundMusic, UnityEngine.AudioSource> { }
-
 public enum E_BackGroundMusic { 
     Titlescreen,
     Victory,
@@ -30,16 +25,26 @@ public enum E_SoundEffect {
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] public static AudioManager Instance;
-    
-    [Header("Music Reference")]
-    public ESoundEffectAudioSourceDictionary SoundEffectDictionary;
-
-    [Header("Sound Effect Reference")]
-    public EBackgroundMusicAudioSourceDictionary BackgroundMusicDictionary;
 
     [Header("Current Audio Playing")]
     public AudioSource BackgroundMusic;
     public AudioSource SoundEffect;
+
+    [Header("Sound Effect Reference")]
+    public AudioSource Click;
+    public AudioSource Voice;
+    public AudioSource Walk;
+    public AudioSource Pip;
+    public AudioSource ElderLeaf;
+
+    [Header("Background Reference")]
+    public AudioSource Titlescreen;
+    public AudioSource Victory;
+    public AudioSource GameOver;
+    public AudioSource Level1;
+    public AudioSource Level2;
+    public AudioSource Level3;
+    public AudioSource LevelExtra;
 
     [Header("Volume")]
     public float masterVolume = -15;
@@ -90,27 +95,68 @@ public class AudioManager : MonoBehaviour
         if (BackgroundMusic.isPlaying)
             BackgroundMusic.Stop();
 
-        BackgroundMusic = BackgroundMusicDictionary[background];
+        switch (background)
+        {
+            case E_BackGroundMusic.Titlescreen:
+                BackgroundMusic = Titlescreen;
+                break;
+            case E_BackGroundMusic.Victory:
+                BackgroundMusic = Victory;
+                break;
+            case E_BackGroundMusic.Game_Over:
+                BackgroundMusic = GameOver;
+                break;
+            case E_BackGroundMusic.Level_1:
+                BackgroundMusic = Level1;
+                break;
+            case E_BackGroundMusic.Level_2:
+                BackgroundMusic = Level2;
+                break;
+            case E_BackGroundMusic.Level_3:
+                BackgroundMusic = Level3;
+                break;
+            case E_BackGroundMusic.Level_Extra:
+                BackgroundMusic = LevelExtra;
+                break;
+        }
 
         BackgroundMusic.Play();
-
-        
     }
 
     public void PlaySoundEffect(E_SoundEffect soundEffect)
     {
-        SoundEffectDictionary[soundEffect].Play();
+
+        switch (soundEffect)
+        {
+            case E_SoundEffect.Click:
+                Click.Play();
+                break;
+            case E_SoundEffect.Voice:
+                Voice.Play();
+                break;
+            case E_SoundEffect.Walk:
+                Walk.Play();
+                break;
+            case E_SoundEffect.Pip:
+                Pip.Play();
+                break;
+            case E_SoundEffect.Elder_leaf:
+                ElderLeaf.Play();
+                break;
+        }
     }
 
-    public void PlaySoundEffect2()
+    public void StopSoundEffect(E_SoundEffect soundEffect)
     {
-        Debug.Log("Test");
+
+        switch (soundEffect)
+        {
+            case E_SoundEffect.Elder_leaf:
+                ElderLeaf.Stop();
+                break;
+            case E_SoundEffect.Pip:
+                Pip.Stop();
+                break;
+        }
     }
-
-
-
-
-
-
-
 }

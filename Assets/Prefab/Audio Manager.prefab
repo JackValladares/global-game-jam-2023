@@ -42,8 +42,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3461112481031639701, guid: a23638499e8cee84999c6f7c88c09aeb, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 59e36ebef6a2b0641a9b701f2e13247c, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 613f8b5508e845448b9534d5f547a5fc, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -56,7 +56,7 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
@@ -170,11 +170,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3461112481031639701, guid: a23638499e8cee84999c6f7c88c09aeb, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 9ed57efbffecacc47a92e4f035d018f0, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 613f8b5508e845448b9534d5f547a5fc, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -184,7 +184,7 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
@@ -560,24 +560,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2843ff7bc8ee9804c982d6b477791c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoundEffectDictionary:
-    m_keys: 000000000100000002000000
-    m_values:
-    - {fileID: 799367077505435068}
-    - {fileID: 799367077518645266}
-    - {fileID: 799367077283442179}
-  BackgroundMusicDictionary:
-    m_keys: 00000000010000000200000003000000040000000500000006000000
-    m_values:
-    - {fileID: 799367077446714859}
-    - {fileID: 799367078204780177}
-    - {fileID: 799367078042121318}
-    - {fileID: 799367077639113973}
-    - {fileID: 799367077674015571}
-    - {fileID: 799367076785162189}
-    - {fileID: 799367076800165882}
   BackgroundMusic: {fileID: 799367077044762549}
   SoundEffect: {fileID: 799367077044762550}
+  Click: {fileID: 799367077505435068}
+  Voice: {fileID: 799367077518645266}
+  Walk: {fileID: 799367077283442179}
+  Pip: {fileID: 1691168751}
+  ElderLeaf: {fileID: 1836847450}
+  Titlescreen: {fileID: 799367077446714859}
+  Victory: {fileID: 799367078204780177}
+  GameOver: {fileID: 799367078042121318}
+  Level1: {fileID: 799367077639113973}
+  Level2: {fileID: 799367077674015571}
+  Level3: {fileID: 799367076785162189}
+  LevelExtra: {fileID: 799367076800165882}
   masterVolume: 5
   soundEffectVolume: 5
   backgroundSliderVolume: 5
