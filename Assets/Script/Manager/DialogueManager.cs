@@ -60,20 +60,20 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (Dialogue dialogue in DialogueList)
         {
-            //if (dialogue.Name == E_Character.Pip)
-            //{
-            //    GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySoundEffect(E_SoundEffect.Pip);
-            //}
-            //if (dialogue.Name == E_Character.ElderLeaf)
-            //{
-            //    GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySoundEffect(E_SoundEffect.Elder_leaf);
-            //}
+            if (dialogue.Name == E_Character.Pip)
+            {
+                GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySoundEffect(E_SoundEffect.Pip);
+            }
+            if (dialogue.Name == E_Character.ElderLeaf)
+            {
+                GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySoundEffect(E_SoundEffect.Elder_leaf);
+            }
             ImageUI.sprite = dialogue.Sprite;
             bool beforeLast = DialogueList.Count - 2 == DialogueList.IndexOf(dialogue);
             yield return StartCoroutine(DisplayString(dialogue, beforeLast));
             currentSpeed = secondsBetweenCharacters;
-            //GameObject.Find("Audio Manager").GetComponent<AudioManager>().StopSoundEffect(E_SoundEffect.Pip);
-            //GameObject.Find("Audio Manager").GetComponent<AudioManager>().StopSoundEffect(E_SoundEffect.Elder_leaf);
+            GameObject.Find("Audio Manager").GetComponent<AudioManager>().StopSoundEffect(E_SoundEffect.Pip);
+            GameObject.Find("Audio Manager").GetComponent<AudioManager>().StopSoundEffect(E_SoundEffect.Elder_leaf);
         }
     }
 
