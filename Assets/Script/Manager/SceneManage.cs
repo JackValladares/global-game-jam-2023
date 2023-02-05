@@ -7,18 +7,6 @@ using UnityEngine.UIElements;
 
 public class SceneManage : MonoBehaviour
 {
-    [SerializeField] public static SceneManage Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-        else if (Instance != this)
-            Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
-    }
-
     public void LoadScene(string scene) 
     {
         Debug.Log(scene);

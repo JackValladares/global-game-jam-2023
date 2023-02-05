@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2190820760637744177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2190820760637744178}
+  - component: {fileID: 2190820760637744179}
+  m_Layer: 0
+  m_Name: Dialogue Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2190820760637744178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190820760637744177}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.736314, y: 2.5457215, z: -0.070617355}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2190820760637744179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190820760637744177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745c0e734ed7164438b3d962c7008984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueList:
+  - Name: 0
+    Text: "Pip, thank you for meeting me at this time of great fear\u2026"
+  - Name: 0
+    Text: Of Course Elder Leaf, what is happening to the Great Tree!?
+  - Name: 0
+    Text: Pip, there are things that you have not yet learned about the world, things
+      that you have been trained for.
+  - Name: 0
+    Text: ALIENS!?
+  - Name: 0
+    Text: "\u2026No?"
+  - Name: 0
+    Text: "Oh\u2026 well what is it?"
+  - Name: 0
+    Text: "Well if you can contain yourself, there is a rot that has infected our
+      Great Tree, a rot that comes once every century. This rot spawns from the evil
+      of the world.\r"
+  - Name: 0
+    Text: "I thought we got rid of that?\r"
+  - Name: 0
+    Text: "No, that was just Brian\u2026\r\n"
+  - Name: 0
+    Text: "Ah ok, well what does this have to do with me?\r"
+  - Name: 0
+    Text: 'The rot has intertwined with the roots of our great tree, you must go
+      down into the Crystal Cavern below the Great Tree and relieve the roots of
+      the rot.
+
+'
+  - Name: 0
+    Text: "I don\u2019t know how to do that\u2026\r"
+  - Name: 0
+    Text: "As your King I command you!?\r"
+  - Name: 0
+    Text: "You\u2019re the Mayor\u2026"
+  - Name: 0
+    Text: "Same thing!? Now Go!?\r"
+  Timeline: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  TextUI: {fileID: 0}
+  currentSpeed: 0.15
+  secondsBetweenCharacters: 0.15
+  dialogueInput: 13

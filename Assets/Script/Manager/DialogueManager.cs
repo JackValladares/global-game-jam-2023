@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public enum E_Character { Pip, ElderLeaf }
 
@@ -13,6 +14,7 @@ public class Dialogue {
     public E_Character Name;
     [TextArea(3, 10)]
     public string Text;
+    public Sprite Sprite;
 }
 
 public class DialogueManager : MonoBehaviour
@@ -23,9 +25,11 @@ public class DialogueManager : MonoBehaviour
     public PlayableDirector Timeline;
     public GameObject DialogueUI;
     public TextMeshProUGUI TextUI;
+    public Image ImageUI;
     public float currentSpeed = 0.15f;
     public float secondsBetweenCharacters = 0.15f;
     public KeyCode dialogueInput = KeyCode.Return;
+
     private void Awake()
     {
         if (Instance == null)
@@ -46,8 +50,8 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayDialogue()
     {
-        currentSpeed = secondsBetweenCharacters;
         DialogueUI.SetActive(true);
+        currentSpeed = secondsBetweenCharacters;
         StartCoroutine(LoopDialogue());
     }
 
@@ -55,22 +59,25 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (Dialogue dialogue in DialogueList)
         {
-            bool isLast = DialogueList.Count - 1 == DialogueList.IndexOf(dialogue);
-            yield return StartCoroutine(DisplayString(dialogue, isLast));
+            ImageUI.sprite = dialogue.Sprite;
+            bool beforeLast = DialogueList.Count - 2 == DialogueList.IndexOf(dialogue);
+            yield return StartCoroutine(DisplayString(dialogue, beforeLast));
             currentSpeed = secondsBetweenCharacters;
+            Debug.Log(DialogueList.Count);
+            Debug.Log(DialogueList.IndexOf(dialogue));
+            Debug.Log(beforeLast);
+            Debug.Log(dialogue.Text);
         }
     }
 
     public void EndDialogue()
     {
-        GameObject.FindWithTag("DialogueUI").SetActive(false);
-
         if (Timeline != null) {
             Timeline.Play();
         }
     }
 
-    private IEnumerator DisplayString(Dialogue dialogue, bool isLast)
+    private IEnumerator DisplayString(Dialogue dialogue, bool beforeLast)
     {
         int stringLength = dialogue.Text.Length;
         int currentCharacterIndex = 0;
@@ -104,7 +111,7 @@ public class DialogueManager : MonoBehaviour
             yield return 0;
         }
 
-        if (isLast) {
+        if (beforeLast) {
             EndDialogue();
         }
     }
